@@ -52,7 +52,7 @@ public class PageBean {
 	
 	public String somar() {
 		
-		flash.put("resp",num1+num2+num3);
+		flash.put("resp",(num1+num2+num3));
 		
 		
 		return "result";
