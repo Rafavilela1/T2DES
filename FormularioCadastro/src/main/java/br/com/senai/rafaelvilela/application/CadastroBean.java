@@ -3,6 +3,8 @@ package br.com.senai.rafaelvilela.application;
 
 
 
+import java.io.Serializable;
+
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.Flash;
 import javax.inject.Inject;
@@ -10,11 +12,11 @@ import javax.inject.Named;
 
 import br.com.senai.rafaelvilela.model.Linguagem;
 
-
 @SuppressWarnings("serial")
-@Named
+@Named("cadastro")
 @RequestScoped
-public class CadastroBean {
+public class CadastroBean implements Serializable{
+
 	private String nome;
 	private String email;
 	private String senha1;
@@ -22,12 +24,11 @@ public class CadastroBean {
 	private Character sexo;
 	private Boolean receberEmails;
 	private String observacoes;
-	private Integer [] linguagens;
-	
+	private Integer[] linguagens;
 	
 	public Linguagem[] getListaLinguagens() {
 		return Linguagem.LINGUAGENS;
-	} 
+	}
 	
 	
 	public String getNome() {
@@ -78,8 +79,23 @@ public class CadastroBean {
 	public void setLinguagens(Integer[] linguagens) {
 		this.linguagens = linguagens;
 	}
- 	
 	
+	public String getLinguagensAsString() {
+		
+		String str="";
+		boolean first = true;
+		for(Integer linguagem : linguagens) {
+			if(!first) {
+				str = ",";
+			}
+			str += linguagem;
+			first = false;
+		}
+		
+		return str;
 	}
 
+	
+		
 
+}

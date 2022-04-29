@@ -6,51 +6,47 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:jsf="http://xmlns.jcp.org/jsf"
 	lang="pt-br">
+
 <h:head>
-<meta http-equi="Content-Type" content="text/html; charset=ISO-8859-1"/>
-<title>Cadastro</title>
+	<meta http-equi="Content-Type" content="text/html; charset-ISO-8859-1"/>
+	<title>Cadastro</title>
+
 </h:head>
 
 <body>
-<h:form>
-
-<h:panelGrid columns="2">
-<f:facet name="header">
-Cadastro de Usuário
-</f:facet>
-Nome:
-<h:inputText value="#{cadastro.nome}"></h:inputText>
-Email:
-<h:inputText value="#{cadastro.email}"></h:inputText>
-Senha:
-<h:inputText value="#{cadastro.senha1}"></h:inputText>
-Confirmação de Senha:
-<h:inputText value="#{cadastro.senha2}"></h:inputText>
-Sexo:
-<h:selectOneRadio>
-<f:selectItem itemValue="F" itemLabel="Feminino"></f:selectItem>
-<f:selectItem itemValue="M" itemLabel="Masculino"></f:selectItem>
-</h:selectOneRadio>
-Deseja Receber email?
-<h:selectBooleanCheckbox value="#{cadastro.receberEmails}"></h:selectBooleanCheckbox>
-Observações:
-<h:inputTextarea value="#{cadastro.observacoes}" rows="4" cols="30"></h:inputTextarea>
-
-
-Linguagens de Porgramação:
-<h:selectManyCheckbox value="#{cadastro.Linguagens}">
-<f:selectItem value="#{cadastro.listaLinguagens}" var="l" itemValue="#{l.id}" itemLabel="#{l.nome}"></f:selectItem>
-
-</h:selectManyCheckbox>
-
-
-
-
-</h:panelGrid>
-
-
-<h:commandButton value="Cadastrar" action="info"></h:commandButton>
-</h:form>
-</body>
 	
+	<h:form>
+		<h:panelGrid columns="2">
+			<f:facet name="header">
+				Cadastro de Usuário
+			</f:facet>
+			Nome:
+			<h:inputText value="#{cadastro.nome}"/>
+			Email:
+			<h:inputText value="#{cadastro.email}"/>
+			Senha:
+			<h:inputText value="#{cadastro.senha1}"/>
+			Confirmação de senha:
+			<h:inputText value="#{cadastro.senha2}"/>
+			Sexo:
+			<h:selectOneRadio value="#{cadastro.sexo}">
+				<f:selectItem itemValue="F" itemLabel="Feminino"/>
+				<f:selectItem itemValue="M" itemLabel="Masculino"/>	
+			</h:selectOneRadio>
+			Deseja receber emails?
+			<h:selectBooleanCheckbox value="#{cadastro.receberEmails}"/>
+			Observações
+			<h:inputTextarea  rows="4" cols="60"/>
+			Linguagem de programação:
+			<h:selectManyCheckbox value="#{cadastro.linguagens}">
+			<f:selectItems value= "#{cadastro.listaLinguagens}" var="l" itemValue="#{l.id}" itemLabel="#{l.nome}"/>
+			</h:selectManyCheckbox>
+		</h:panelGrid>
+		
+		<h:commandButton value = "Cadastrar" action="info"></h:commandButton>
+		
+	
+	</h:form>
+
+</body>
 </html>
