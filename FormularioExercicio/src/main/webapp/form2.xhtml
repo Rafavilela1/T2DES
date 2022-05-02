@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro Comercial</title>
+</h:head>
+
+<body>
+	<h:form>
+			Nome da Empresa:
+			<h:inputText value="#{pageBean.pessoa.nomeEmpresa}" />
+			Cargo:
+			<h:inputText value="#{pageBean.pessoa.cargo}" />
+			Salário:
+			<h:inputText value="#{pageBean.pessoa.salario}">
+				<f:convertNumber locale="pt_BR" />
+			</h:inputText>
+			Rua:
+			<h:inputText value="#{pageBean.pessoa.endCom.rua}" />
+			Número:
+			<h:inputText value="#{pageBean.pessoa.endCom.num}" />
+			Complemento:
+			<h:inputText value="#{pageBean.pessoa.endCom.comp}" />
+			Bairro:
+			<h:inputText value="#{pageBean.pessoa.endCom.bairro}" />
+			CEP:
+			<h:inputText value="#{pageBean.pessoa.endCom.cep}" />
+			Cidade:
+			<h:inputText value="#{pageBean.pessoa.endCom.cidade}" />
+			Estado:
+			<h:selectOneMenu value="#{pageBean.pessoa.endCom.estado.sigla}">
+				<f:selectItem itemValue="Selecione" noSelectionOption="true" />
+				<f:selectItems value="#{pageBean.estados}" var="e" itemValue="#{e.sigla}" itemLabel="#{e.sigla} - #{e.nome}" />
+			</h:selectOneMenu>
+			Telefone comercial:
+			<h:panelGroup>
+				<h:inputText value="#{pageBean.pessoa.telCom.ddd}" size="2" maxlength="2" />
+				<h:inputText value="#{pageBean.pessoa.telCom.num}" />
+			</h:panelGroup>
+		</h:panelGrid>
+		<h:commandButton value="Anterior" action="form1" />
+		<h:commandButton value="Próximo" action="form3" />
+	</h:form>
+</body>
+</html>

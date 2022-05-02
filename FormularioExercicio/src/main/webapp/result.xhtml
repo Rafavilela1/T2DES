@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Resultados</title>
+</h:head>
+
+<body>
+<h:panelGrid columns="3">
+<h:panelGrid columns="2">
+<f:facet name="header"> Cadastro do Usuário</f:facet>
+<h:outputText value="Nome:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.nome}"></h:outputText>
+
+<h:outputText value="E-mail:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.email}"></h:outputText>
+
+<h:outputText value="Senha:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.senha1}"></h:outputText>
+
+<h:outputText value="Confirmação da senha:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.senha2}"></h:outputText>
+
+<h:outputText value="Observações:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.observacoes}"></h:outputText>
+
+
+<h:outputText value="Linguagens de Programação:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.linguagensAsString}"></h:outputText>
+
+
+</h:panelGrid>
+
+
+<h:panelGrid columns="2">
+<f:facet name="header"> Cadastro do Usuário</f:facet>
+Nome:
+			<h:ouputText value="#{pageBean.pessoa.nome}"/>
+		E-Mail:
+			<h:ouputText value="#{pageBean.pessoa.email}"/>
+		Data de Nascimento:
+			<h:ouputText value="#{pageBean.pessoa.dataNascimento}"/>
+		Rua:
+			<h:ouputText value="#{pageBean.pessoa.endRes.rua}"/>
+		Número:
+			<h:ouputText value="#{pageBean.pessoa.endRes.num}"/>
+		Complemento:
+			<h:ouputText value="#{pageBean.pessoa.endRes.comp}"/>
+		Bairro:
+			<h:ouputText value="#{pageBean.pessoa.endRes.bairro}"/>
+		CEP:
+			<h:ouputText value="#{pageBean.pessoa.endRes.cep}"/>
+		Cidade:
+			<h:ouputText value="#{pageBean.pessoa.endRes.cidade}"/>
+		Estado(Sigla):
+			<h:outputText value="#{pageBean.pessoa.endRes.estado.sigla}"/>
+		Estado(Nome):
+			<h:outputText value="#{pageBean.pessoa.endRes.estado.area}"/>	
+		Telefone:
+			<h:panelGroup>
+				<h:inputText value="#{pageBean.pessoa.telres.ddd}" size="2" maxlength="2" />
+				<h:inputText value="#{pageBean.pessoa.telres.num}" />
+			</h:panelGroup>
+		Celular:
+			<h:panelGroup>
+				<h:inputText value="#{pageBean.pessoa.telCel.ddd}" size="2" maxlength="2" />
+				<h:inputText value="#{pageBean.pessoa.telCel.num}" />
+			</h:panelGroup>
+
+
+</h:panelGrid>
+
+
+<h:panelGrid columns="2">
+<f:facet name="header"> Cadastro do Usuário</f:facet>
+<h:outputText value="Nome:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.nome}"></h:outputText>
+
+<h:outputText value="E-mail:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.email}"></h:outputText>
+
+<h:outputText value="Senha:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.senha1}"></h:outputText>
+
+<h:outputText value="Confirmação da senha:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.senha2}"></h:outputText>
+
+<h:outputText value="Observações:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.observacoes}"></h:outputText>
+
+
+<h:outputText value="Linguagens de Programação:"></h:outputText>
+<h:outputText value="#{pageBean.pessoa.linguagensAsString}"></h:outputText>
+
+
+</h:panelGrid>
+</h:panelGrid>
+</body>
+</html>
