@@ -18,7 +18,7 @@ public class PageBean implements Serializable {
 	private Integer min;
 	private Integer max;
 	
-	private List<Integer> num = new ArrayList<>();
+
 
 	
 	public Integer getQtde() {
@@ -45,7 +45,8 @@ public class PageBean implements Serializable {
 		this.max = max;
 	}
 
-	public List<Integer> getNumeros() {
+	private List<Integer> num = new ArrayList<>();
+	public List<Integer> getNum() {
 		return num;
 	}
 

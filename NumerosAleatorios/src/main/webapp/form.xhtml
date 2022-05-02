@@ -39,7 +39,7 @@
 		<h:commandButton value="Gerar" action="#{pageBean.geradordeNumeros}" />
 		<hr />
 
-		<h:selectManyListbox rendered="#{pageBean.num.size() > 0}" style="width: 140px;" readonly="true">
+		<h:selectManyListbox rendered="#{pageBean.num.size()>0}" style="width: 140px;" readonly="true">
 			<f:selectItems value="#{pageBean.num}" var="n" itemLabel="#{n}" />
 		</h:selectManyListbox>
 	</h:form>
