@@ -36,11 +36,11 @@
 			<h:inputText value="#{pageBean.max}" size="4" />
 		</h:panelGrid>
 
-		<h:commandButton value="Gerar" action="#{pageBean.gerar}" />
+		<h:commandButton value="Gerar" action="#{pageBean.geradordeNumeros}" />
 		<hr />
 
-		<h:selectManyListbox rendered="#{pageBean.numeros.size() > 0}" style="width: 140px;" readonly="true">
-			<f:selectItems value="#{pageBean.numeros}" var="n" itemLabel="#{n}" />
+		<h:selectManyListbox rendered="#{pageBean.num.size() > 0}" style="width: 140px;" readonly="true">
+			<f:selectItems value="#{pageBean.num}" var="n" itemLabel="#{n}" />
 		</h:selectManyListbox>
 	</h:form>
 </body>

@@ -18,7 +18,7 @@ public class PageBean implements Serializable {
 	private Integer min;
 	private Integer max;
 	
-	private List<Integer> numeros = new ArrayList<>();
+	private List<Integer> num = new ArrayList<>();
 
 	
 	public Integer getQtde() {
@@ -46,18 +46,18 @@ public class PageBean implements Serializable {
 	}
 
 	public List<Integer> getNumeros() {
-		return numeros;
+		return num;
 	}
 
-	public void setNumeros(List<Integer> numeros) {
-		this.numeros = numeros;
+	public void setNumeros(List<Integer> num) {
+		this.num = num;
 	}
 	
-public String gerar() {
+public String geradordeNumeros() {
 		
 		for (int i = 0; i < qtde; i++) {
 			int n = random.nextInt(max - min) + min + 1;
-			numeros.add(n);
+			num.add(n);
 		}
 		
 		return null;
