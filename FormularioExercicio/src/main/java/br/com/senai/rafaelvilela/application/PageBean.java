@@ -17,7 +17,7 @@ import br.com.senai.rafaelvilela.application.model.Interesse;
 import br.com.senai.rafaelvilela.application.model.Pessoa;
 import br.com.senai.rafaelvilela.application.model.Telefone;
 
-@Named("cadastro")
+@Named()
 @RequestScoped
 public class PageBean implements Serializable {
 	
@@ -45,7 +45,7 @@ public class PageBean implements Serializable {
 		return Constantes.ESTADOS;
 	}
 
-	public List<Interesse> getInteresses() {
+	public List<Interesse> getInteresse() {
 		return Constantes.INTERESSES;
 	}
 	}

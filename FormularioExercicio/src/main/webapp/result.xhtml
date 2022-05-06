@@ -7,98 +7,103 @@
 
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Resultados</title>
+	<title>Cadastro</title>
 </h:head>
 
 <body>
-<h:panelGrid columns="3">
-<h:panelGrid columns="2">
-<f:facet name="header"> Cadastro do Usuário</f:facet>
-<h:outputText value="Nome:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.nome}"></h:outputText>
-
-<h:outputText value="E-mail:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.email}"></h:outputText>
-
-<h:outputText value="Senha:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.senha1}"></h:outputText>
-
-<h:outputText value="Confirmação da senha:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.senha2}"></h:outputText>
-
-<h:outputText value="Observações:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.observacoes}"></h:outputText>
-
-
-<h:outputText value="Linguagens de Programação:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.linguagensAsString}"></h:outputText>
-
-
-</h:panelGrid>
-
-
-<h:panelGrid columns="2">
-<f:facet name="header"> Cadastro do Usuário</f:facet>
-Nome:
-			<h:ouputText value="#{pageBean.pessoa.nome}"/>
-		E-Mail:
-			<h:ouputText value="#{pageBean.pessoa.email}"/>
-		Data de Nascimento:
-			<h:ouputText value="#{pageBean.pessoa.dataNascimento}"/>
-		Rua:
-			<h:ouputText value="#{pageBean.pessoa.endRes.rua}"/>
-		Número:
-			<h:ouputText value="#{pageBean.pessoa.endRes.num}"/>
-		Complemento:
-			<h:ouputText value="#{pageBean.pessoa.endRes.comp}"/>
-		Bairro:
-			<h:ouputText value="#{pageBean.pessoa.endRes.bairro}"/>
-		CEP:
-			<h:ouputText value="#{pageBean.pessoa.endRes.cep}"/>
-		Cidade:
-			<h:ouputText value="#{pageBean.pessoa.endRes.cidade}"/>
-		Estado(Sigla):
-			<h:outputText value="#{pageBean.pessoa.endRes.estado.sigla}"/>
-		Estado(Nome):
-			<h:outputText value="#{pageBean.pessoa.endRes.estado.area}"/>	
-		Telefone:
-			<h:panelGroup>
-				<h:inputText value="#{pageBean.pessoa.telres.ddd}" size="2" maxlength="2" />
-				<h:inputText value="#{pageBean.pessoa.telres.num}" />
-			</h:panelGroup>
-		Celular:
-			<h:panelGroup>
-				<h:inputText value="#{pageBean.pessoa.telCel.ddd}" size="2" maxlength="2" />
-				<h:inputText value="#{pageBean.pessoa.telCel.num}" />
-			</h:panelGroup>
-
-
-</h:panelGrid>
-
-
-<h:panelGrid columns="2">
-<f:facet name="header"> Cadastro do Usuário</f:facet>
-<h:outputText value="Nome:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.nome}"></h:outputText>
-
-<h:outputText value="E-mail:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.email}"></h:outputText>
-
-<h:outputText value="Senha:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.senha1}"></h:outputText>
-
-<h:outputText value="Confirmação da senha:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.senha2}"></h:outputText>
-
-<h:outputText value="Observações:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.observacoes}"></h:outputText>
-
-
-<h:outputText value="Linguagens de Programação:"></h:outputText>
-<h:outputText value="#{pageBean.pessoa.linguagensAsString}"></h:outputText>
-
-
-</h:panelGrid>
-</h:panelGrid>
+	<h:panelGrid columns="3" border="1">
+		<h:panelGrid columns="2">
+			<f:facet name="header">
+				Dados Pessoais
+			</f:facet>
+		
+			Nome:
+			<h:outputText value="#{pageBean.pessoa.nome}" />
+			
+			E-mail:
+			<h:outputText value="#{pageBean.pessoa.email}" />
+			
+			Data de nascimento:
+			<h:outputText value="#{pageBean.pessoa.dataNascimento}">
+				<f:convertDateTime pattern="dd/MM/yyyy" />
+			</h:outputText>
+			
+			Rua:
+			<h:outputText value="#{pageBean.pessoa.endRes.rua}" />
+			
+			Número:
+			<h:outputText value="#{pageBean.pessoa.endRes.num}" />
+			
+			Complemento:
+			<h:outputText value="#{pageBean.pessoa.endRes.comp}" />
+			
+			Bairro:
+			<h:outputText value="#{pageBean.pessoa.endRes.bairro}" />
+			
+			CEP:
+			<h:outputText value="#{pageBean.pessoa.endRes.cep}" />
+			
+			Cidade:
+			<h:outputText value="#{pageBean.pessoa.endRes.cidade}" />
+			
+			Estado:
+			<h:outputText value="#{pageBean.pessoa.endRes.estado.sigla}" />
+			
+			Telefone residencial:
+			<h:outputText value="(#{pageBean.pessoa.telRes.ddd}) #{PageBean.pessoa.telRes.num}"  />
+			
+			Telefone celular:
+			<h:outputText value="(#{pageBean.pessoa.telCel.ddd}) #{PageBean.pessoa.telCel.num}"  />
+		</h:panelGrid>
+		<h:panelGrid columns="2">
+			<f:facet name="header">
+				Dados Comerciais
+			</f:facet>
+		
+			Nome da Empresa:
+			<h:outputText value="#{pageBean.pessoa.nomeEmpresa}" />
+			
+			Cargo:
+			<h:outputText value="#{pageBean.pessoa.cargo}" />
+			
+			Salário:
+			<h:outputText value="#{pageBean.pessoa.salario}">
+				<f:convertNumber type="currency" locale="pt_BR" />
+			</h:outputText>
+			
+			Rua:
+			<h:outputText value="#{pageBean.pessoa.endCom.rua}" />
+			
+			Número:
+			<h:outputText value="#{pageBean.pessoa.endCom.num}" />
+			
+			Complemento:
+			<h:outputText value="#{pageBean.pessoa.endCom.comp}" />
+			
+			Bairro:
+			<h:outputText value="#{pageBean.pessoa.endCom.bairro}" />
+			
+			CEP:
+			<h:outputText value="#{pageBean.pessoa.endCom.cep}" />
+			
+			Cidade:
+			<h:outputText value="#{pageBean.pessoa.endCom.cidade}" />
+			
+			Estado:
+			<h:outputText value="#{pageBean.pessoa.endCom.estado.sigla}" />
+			
+			Telefone comercial:
+			<h:outputText value="(#{pageBean.pessoa.telCom.ddd}) #{pageBean.pessoa.telCom.num}"  />
+		</h:panelGrid>
+		<h:panelGrid columns="1">
+			<f:facet name="header">
+				Áreas de Interesse
+			</f:facet>
+		
+			<h:selectManyCheckbox value="#{pageBean.pessoa.interesses}" layout="pageDirection" readonly="true">
+				<f:selectItems value="#{pageBean.interesse}" var="a" itemValue="#{a.id}" itemLabel="#{a.area}"  />
+			</h:selectManyCheckbox>
+		</h:panelGrid>
+	</h:panelGrid>
 </body>
 </html>

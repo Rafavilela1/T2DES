@@ -1,6 +1,6 @@
 package br.com.senai.rafaelvilela.application.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Pessoa {
 private String nome,email,nomeEmpresa,cargo;
@@ -8,7 +8,7 @@ private Date dataNascimento;
 private Endereco endRes,endCom;
 private Telefone telRes,telCel,telCom;
 private Double salario;
-private Integer [] interesse;
+private int [] interesses;
 public String getNome() {
 	return nome;
 }
@@ -75,11 +75,11 @@ public Double getSalario() {
 public void setSalario(Double salario) {
 	this.salario = salario;
 }
-public Integer[] getInteresse() {
-	return interesse;
+public int[] getInteresses() {
+	return interesses;
 }
-public void setInteresses(Integer[] interesse) {
-	this.interesse = interesse;
+public void setInteresses(int[] interesses) {
+	this.interesses = interesses;
 }
 
 
