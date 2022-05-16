@@ -48,16 +48,12 @@
 			Lista de Despesas
 			</th>
 			</tr>
-			
-			
 			<tr>
-			
-			<th class="cabecalho">cabeção</th>
-			<th class="cabecalho">data</th>
-			<th class="cabecalho">descricao</th>
-			<th class="cabecalho">valor</th>
-			<th class="cabecalho">operacao</th>
-						
+			<th class="cabecalho">Cabecalho</th>
+			<th class="cabecalho">Data</th>
+			<th class="cabecalho">Descrição</th>
+			<th class="cabecalho">Valor</th>
+			<th class="cabecalho">Operação</th>			
 			</tr>
 			<ui:repeat value="#{tabela.despesas}" var="d" varStatus="st">
 			
@@ -98,7 +94,7 @@
 		
 		
 		<h:panelGroup rendered="#{tabela.despesas.size()==0}">
-		<h:outputText value="Não cadastrado" styleClass="Mensage"></h:outputText>
+		<h:outputText value="Nenhum usuário cadastrado" styleClass="Message"></h:outputText>
 		</h:panelGroup>
 	</h:form>
 	
