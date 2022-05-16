@@ -43,6 +43,11 @@ public class PageBean implements Serializable {
 		despesa.setEdit(false);
 		return null;
 	}
+	
+	
+	
+	
+	
 	public ListDataModel<Despesas> getDespesas() {
 		
 		return despesas;
