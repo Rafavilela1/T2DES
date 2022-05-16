@@ -13,56 +13,56 @@ import br.com.senai.rafaelvilela.application.model.Despesas;
 
 
 
-@SuppressWarnings("serial") //tira anuncios de advertência
+@SuppressWarnings("serial") 
 @Named("tabela")
-@SessionScoped //tempo de vida da página, o "session" mantém os dados enquanto o navegador estiver aberto
-public class TabelaBean implements Serializable{
+@SessionScoped 
+public class PageBean implements Serializable{
 	
 	private List<Despesas> despesas = new ArrayList<>();
-	//lista que trabalha com o jsf
-	String data1;
-	String desc1;
-	Double Valor1;
+	
+	String date;
+	String desc;
+	Double valor;
 	Boolean a = false; 
 	
 	
-	public String getData1() {
-		return data1;
+	public String getDate() {
+		return date;
 	}
 
-	public void setData1(String data1) {
-		this.data1 = data1;
+	public void setDate(String date) {
+		this.date = date;
 	}
 
-	public String getDesc1() {
-		return desc1;
+	public String getDesc() {
+		return desc;
 	}
 
-	public void setDesc1(String desc1) {
-		this.desc1 = desc1;
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 
-	public Double getValor1() {
-		return Valor1;
+	public Double getValor() {
+		return valor;
 	}
 
-	public void setValor1(Double valor1) {
-		Valor1 = valor1;
+	public void setValor(Double valor1) {
+		valor = valor1;
 	}
 
 	
 	
 	
 	
-	public String inserir(String data,String desc,Double Valor) {
+	public String inserir(String data,String desc,Double valor) {
 		
-		Despesas d = new Despesas(data,desc,Valor); //instância da listdatamodel
+		Despesas d = new Despesas(data,desc,valor); 
 		d.setEdit(true);
 		a =true;
 		despesas.add(d);
-		data1 = null;
-		desc1 = null;
-		Valor1= null;
+		date = null;
+		desc = null;
+		valor= null;
 		return null;
 		
 	}

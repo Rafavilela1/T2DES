@@ -19,24 +19,24 @@
 	<h:panelGrid>
 	
 	<h:column>
-	<h:outputText value="Data"></h:outputText>
+	<h:outputText value="Data:"></h:outputText>
 	<br/>
-	<h:inputText value="#{tabela.data1}" id="data" required="Este campo é obrigatorio"></h:inputText>
+	<h:inputText value="#{tabela.date}" id="data" required="Campo obrigatório"></h:inputText>
 	</h:column>
 	
 	<h:column>
-	<h:outputText value="Descrição"></h:outputText>
+	<h:outputText value="Descrição:"></h:outputText>
 	<br/>
-	<h:inputText value="#{tabela.desc1}" id="descricao" required="Este campo é obrigatorio"></h:inputText>
+	<h:inputText value="#{tabela.desc}" id="descricao" required="Campo obrigatório"></h:inputText>
 	</h:column>
 	
 	<h:column>
-	<h:outputText value="valor"></h:outputText>
+	<h:outputText value="Valor:"></h:outputText>
 	<br/>
-	<h:inputText value="#{tabela.valor1}" id="valor" required="Este campo é obrigatorio"></h:inputText>
+	<h:inputText value="#{tabela.valor}" id="valor" required="Campo obrigatório"></h:inputText>
 	</h:column>
 	
-	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.data1,tabela.desc1,tabela.valor1)}"></h:commandButton>
+	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.date,tabela.desc,tabela.valor)}"></h:commandButton>
 	</h:panelGrid>
 	</h:panelGroup>
 	
@@ -85,7 +85,7 @@
 				<h:commandLink value="Alterar" action="#{tabela.editar(d)}"></h:commandLink>
 				<h:commandLink value="Excluir" action="#{tabela.excluir(d)}"></h:commandLink>
 				</h:panelGroup>
-				<h:commandLink value="Gravar" action="#{tabela.gravar(d)}" rendered= "#{d.edit }"></h:commandLink>
+				<h:commandLink value="Gravar" action="#{tabela.gravar(d)}" rendered= "#{d.edit}"></h:commandLink>
 				</td>
 		
 		
@@ -102,15 +102,12 @@
 		</h:panelGroup>
 	</h:form>
 	
-	<SCRIPT type="text/javascript">
-	var data = document.getElementById("data");
-	var descricao = document.getElementById("descricao");
-	var valor = document.getElementById("valor");
-	
-	
-	if()
-	
-	</SCRIPT>
+	<script type="text/javascript">
+	var data = document.getElementById("Data");
+	var descricao = document.getElementById("Descrição");
+	var valor = document.getElementById("Valor");
+	if()	
+	</script>
 
 </body>
 </html>
