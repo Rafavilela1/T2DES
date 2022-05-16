@@ -23,7 +23,7 @@ public class PageBean implements Serializable{
 	String date;
 	String desc;
 	Double valor;
-	Boolean a = false; 
+	Boolean back = false; 
 	
 	
 	public String getDate() {
@@ -58,7 +58,7 @@ public class PageBean implements Serializable{
 		
 		Despesas d = new Despesas(data,desc,valor); 
 		d.setEdit(true);
-		a =true;
+		back =true;
 		despesas.add(d);
 		date = null;
 		desc = null;
@@ -90,12 +90,12 @@ public class PageBean implements Serializable{
 		return despesas;
 	}
 
-	public Boolean getA() {
-		return a;
+	public Boolean getBack() {
+		return back;
 	}
 
-	public void setA(Boolean a) {
-		this.a = a;
+	public void setBack(Boolean back) {
+		this.back = back;
 	}
 
 }

@@ -9,7 +9,7 @@
 	
 <h:head>
 	<meta http-equi="Content=Type" content="text/html; charset=ISO-8859-1"/>
-	<title> Despesas </title>
+	<title>Despesas</title>
 </h:head>
 <body>
 <h:outputStylesheet library = "css" name = "styles.css" /> 
@@ -40,7 +40,7 @@
 	</h:panelGrid>
 	</h:panelGroup>
 	
-	<h:panelGroup rendered="#{tabela.a == true }">
+	<h:panelGroup rendered="#{tabela.back == true }">
 		<table>
 			
 			<tr>
@@ -97,7 +97,7 @@
 		<br/>
 		
 		
-		<h:panelGroup rendered="#{tabela.despesas.size() == 0}">
+		<h:panelGroup rendered="#{tabela.despesas.size()==0}">
 		<h:outputText value="Não cadastrado" styleClass="Mensage"></h:outputText>
 		</h:panelGroup>
 	</h:form>
