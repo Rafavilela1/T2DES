@@ -1,6 +1,6 @@
 package br.com.senai.rafaelvilela.application.model;
 
-public class Despesas {
+public class Cadastro {
 private String data;
 private String descricao;
 private Double valor;
@@ -11,14 +11,14 @@ public String getData() {
 }
 
 
-public Despesas(String data, String descricao, Double valor) {
+public Cadastro(String data, String descricao, Double valor) {
 	super();
 	this.data = data;
 	this.descricao = descricao;
 	this.valor = valor;
 }
 
-public Despesas() {
+public Cadastro() {
 	this.data = data;
 	this.descricao = descricao;
 	this.valor = valor;

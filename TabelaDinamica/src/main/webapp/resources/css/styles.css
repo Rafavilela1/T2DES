@@ -62,8 +62,13 @@
 	font: 13px Arial, sans-serif;
 }
 
-.message {
+.Message {
 	font: 13px Arial, sans-serif;
 	font-weight: bold;
 	color: red;
+}
+
+
+.form{
+	text-align: center;
 }
