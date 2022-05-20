@@ -11,14 +11,40 @@
 	<meta http-equi="Content=Type" content="text/html; charset=ISO-8859-1"/>
 	<title>Despesas</title>
 </h:head>
-<body>
+
+<script>
+		function verificarCampos(){
+			var data = document.getElementById("f:data").value;
+			var descricao = document.getElementById("f:descricao").value;
+			var valor = document.getElementById("f:valor").value;
+			if(data ==""){
+				alert("Data não Preenchida!");
+				return false;
+				
+			}else{
+				if(descricao ==""){
+					alert("Descrição não Preenchida!");
+					return false;
+				}else{
+					
+					if(valor ==""){
+					alert("Valor não preenchido!");
+					return false;}
+					
+					
+				}
+				}
+			return true;
+		}	
+	</script>
+	<body>
 <h:outputStylesheet library = "css" name ="styles.css"/> 
 <table width="100%" border="1">
 		<tr>
 			<td align="center"> <h3>CADASTRO</h3></td>
 		</tr>
 </table>
-	<h:form styleClass="form">
+	<h:form styleClass="form" id="f">
 	
 	<h:panelGroup>
 	<h:panelGrid>
@@ -41,7 +67,7 @@
 	<h:inputText value="#{tabela.valor}" id="valor" required="Campo obrigatório"></h:inputText>
 	</h:column>
 	
-	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.date,tabela.desc,tabela.valor)}"></h:commandButton>
+	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.date,tabela.desc,tabela.valor)}" onclick="return verificarCampos()"></h:commandButton>
 	</h:panelGrid>
 	</h:panelGroup>
 	
