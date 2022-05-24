@@ -43,13 +43,15 @@
 
 <table width="100%" border="1">
 		<tr>
-			<td align="center"> <h3>CADASTRO</h3></td>
+			<td align="center"> <h3>CADASTRO</h3> <h:graphicImage value="https://www.mgpconsultoria.com.br/wp-content/uploads/2018/10/Cadastro-de-Clientes-Imagem4.jpg"></h:graphicImage></td>
+			
 		</tr>
+	
 
 </table>
 
 	<h:form styleClass="form" id="f">
-
+<center>
 	<h:panelGroup>
 	<h:panelGrid>
 	
@@ -70,8 +72,9 @@
 	<br/>
 	<h:inputText value="#{tabela.valor}" id="valor" required="Campo obrigatório"></h:inputText>
 	</h:column>
-	
+
 	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.date,tabela.desc,tabela.valor)}" onclick="return verificarCampos()"></h:commandButton>
+
 	</h:panelGrid>
 	</h:panelGroup>
 	
@@ -131,6 +134,7 @@
 		<h:panelGroup rendered="#{tabela.despesas.size()==0}">
 		<h:outputText value="Nenhum usuário cadastrado" styleClass="Message"></h:outputText>
 		</h:panelGroup>
+		</center>
 	</h:form>
 	
 	<table width="100%" border="1">
