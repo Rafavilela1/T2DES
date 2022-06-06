@@ -3,13 +3,14 @@ package br.com.senai.rafaelvilela.application.model;
 import java.util.Date;
 
 public class Despesas {
+	//declaração de variável
 	private String descricao;
 	private Double valor;
 	private boolean edit;
 	private String data;
 	
 	
-	
+	//getter e setter
 	public String getDescricao() {
 		return descricao;
 	}

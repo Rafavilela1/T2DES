@@ -1,10 +1,12 @@
 package br.com.senai.rafaelvilela.model;
 
 public class Linguagem {
+	//declaração das variáveis
 	public static Linguagem[] LINGUAGENS;
 	private Integer id;
 	private String nome;
-	
+
+	//Itens da constante
 	static {
 		LINGUAGENS = new Linguagem [5];
 		LINGUAGENS[0] = new Linguagem(1,"Java");
@@ -12,13 +14,14 @@ public class Linguagem {
 		LINGUAGENS[2] = new Linguagem(3,"C++");
 		LINGUAGENS[3] = new Linguagem(4,"C#");
 		LINGUAGENS[4] = new Linguagem(5,"PHP");
-		
-	}
 
+	}
+	//construtor
 	public Linguagem(Integer id, String nome) {
 		this.id = id;
 		this.nome = nome;
 	}
+	//getter e setter
 
 	public Integer getId() {
 		return id;
@@ -35,8 +38,8 @@ public class Linguagem {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
 
-	
+
+
+
 }

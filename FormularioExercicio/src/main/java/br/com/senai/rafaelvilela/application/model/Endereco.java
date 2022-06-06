@@ -1,9 +1,13 @@
 package br.com.senai.rafaelvilela.application.model;
 
+
 public class Endereco {
+	//Declaração de variáveis
 	private String rua,comp,bairro,cep,cidade;
 	private Estado estado;
 	private Integer num;
+	
+	//getter and setter
 	public String getRua() {
 		return rua;
 	}

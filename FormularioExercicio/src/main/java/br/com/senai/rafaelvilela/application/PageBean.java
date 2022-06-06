@@ -20,10 +20,11 @@ import br.com.senai.rafaelvilela.application.model.Telefone;
 @Named()
 @RequestScoped
 public class PageBean implements Serializable {
-	
-	private Pessoa pessoa;
 
+	private Pessoa pessoa;
+	//Atribui os dados cadastrados ao objeto abaixo
 	public Pessoa getPessoa() {
+
 		if (pessoa == null) {
 			pessoa = new Pessoa();
 			pessoa.setEndRes(new Endereco());
@@ -40,7 +41,7 @@ public class PageBean implements Serializable {
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
 	}
-	
+
 	public List<Estado> getEstados() {
 		return Constantes.ESTADOS;
 	}
@@ -48,5 +49,4 @@ public class PageBean implements Serializable {
 	public List<Interesse> getInteresse() {
 		return Constantes.INTERESSES;
 	}
-	}
-	
+}

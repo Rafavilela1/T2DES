@@ -14,32 +14,33 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<f:facet name="header">Gerador de Números Aleatórios</f:facet>
-		
+			<!-- seleciona a quantidade de numeros que aparecerão -->
 			Quantidade de números:
 			<h:selectOneMenu value="#{pageBean.qtde}">
 				<f:selectItem itemValue="1" itemLabel="1" />
-				
+
 				<f:selectItem itemValue="2" itemLabel="2" />
-				
+
 				<f:selectItem itemValue="3" itemLabel="3" />
-				
+
 				<f:selectItem itemValue="4" itemLabel="4" />
-				
+
 				<f:selectItem itemValue="5" itemLabel="5" />
-				
+
 			</h:selectOneMenu>
-		
+			<!-- escolhe o valor minimo e maximo -->
 			Valor Mínimo:
 			<h:inputText value="#{pageBean.min}" size="4" />
 			
 			Valor Máximo:
 			<h:inputText value="#{pageBean.max}" size="4" />
 		</h:panelGrid>
-
+		<!-- executa a ação -->
 		<h:commandButton value="Gerar" action="#{pageBean.geradordeNumeros}" />
 		<hr />
 
-		<h:selectManyListbox rendered="#{pageBean.num.size()>0}" style="width: 140px;" readonly="true">
+		<h:selectManyListbox rendered="#{pageBean.num.size()>0}"
+			style="width: 140px;" readonly="true">
 			<f:selectItems value="#{pageBean.num}" var="n" itemLabel="#{n}" />
 		</h:selectManyListbox>
 	</h:form>

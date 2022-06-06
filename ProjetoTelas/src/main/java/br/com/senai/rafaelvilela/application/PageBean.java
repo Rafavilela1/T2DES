@@ -11,7 +11,8 @@ import javax.inject.Named;
 public class PageBean implements Serializable {
 
 	private String page;
-	
+
+	//enumera as páginas
 	public enum Pages{
 		page_a,page_b;
 	}
@@ -23,7 +24,9 @@ public class PageBean implements Serializable {
 	public void setPage(String page) {
 		this.page = page;
 	}
-	
+
+
+	//retorna a pagina digitada pelo usuário;Se estiver errado ou vazio, não retorna nada.
 	public Pages goTo(){
 		if("a".equals(page)) {
 			return Pages.page_a;
@@ -32,7 +35,7 @@ public class PageBean implements Serializable {
 		}else {
 			return null;
 		}
-		
+
 	}
-	
+
 }

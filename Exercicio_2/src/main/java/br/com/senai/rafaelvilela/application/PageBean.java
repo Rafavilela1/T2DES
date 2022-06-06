@@ -11,11 +11,12 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class PageBean {
+	//declara as variáveis
 	String texto;
 	String invertido;
 	
 	
-
+	//getter e setter
 	public String getTexto() {
 		return texto;
 	}
@@ -36,10 +37,11 @@ public class PageBean {
 	}
 	@Inject
 	private Flash flash;
+	//Inverte o texto
 	public String inversao() {
 		String invertido = new StringBuilder(texto).reverse().toString();
 		flash.put("result", invertido);
-		return "result";
+		return "result"; //vai para a página de resultado
 	}
 
 }

@@ -14,47 +14,52 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<f:facet name="header">Dados Pessoais</f:facet>
-		
-		
+
+			<!-- recebe os dados do usuário -->
 		Nome:
-			<h:inputText value="#{pageBean.pessoa.nome}"/>
+			<h:inputText value="#{pageBean.pessoa.nome}" />
 		E-Mail:
-			<h:inputText value="#{pageBean.pessoa.email}"/>
+			<h:inputText value="#{pageBean.pessoa.email}" />
 		Data de Nascimento:
 			<h:inputText value="#{pageBean.pessoa.dataNascimento}">
-			<f:convertDateTime pattern="dd/MM/yyyy" />
+				<f:convertDateTime pattern="dd/MM/yyyy" />
 			</h:inputText>
 		Rua:
-			<h:inputText value="#{pageBean.pessoa.endRes.rua}"/>
+			<h:inputText value="#{pageBean.pessoa.endRes.rua}" />
 		Número:
-			<h:inputText value="#{pageBean.pessoa.endRes.num}"/>
+			<h:inputText value="#{pageBean.pessoa.endRes.num}" />
 		Complemento:
-			<h:inputText value="#{pageBean.pessoa.endRes.comp}"/>
+			<h:inputText value="#{pageBean.pessoa.endRes.comp}" />
 		Bairro:
-			<h:inputText value="#{pageBean.pessoa.endRes.bairro}"/>
+			<h:inputText value="#{pageBean.pessoa.endRes.bairro}" />
 		CEP:
-			<h:inputText value="#{pageBean.pessoa.endRes.cep}"/>
+			<h:inputText value="#{pageBean.pessoa.endRes.cep}" />
 		Cidade:
-			<h:inputText value="#{pageBean.pessoa.endRes.cidade}"/>
+			<h:inputText value="#{pageBean.pessoa.endRes.cidade}" />
 		Estado:
+		<!-- escolha do estado e sigla cadastrados na lista -->
 			<h:selectOneMenu value="#{pageBean.pessoa.endRes.estado.sigla}">
-			<f:selectItem itemValue="Selecione" noSelectionOption="true"/>
-			<f:selectItems value= "#{pageBean.estados}" var="e" itemValue="#{e.sigla}" itemLabel="#{e.sigla} - #{e.nome}"/>
+				<f:selectItem itemValue="Selecione" noSelectionOption="true" />
+				<f:selectItems value="#{pageBean.estados}" var="e"
+					itemValue="#{e.sigla}" itemLabel="#{e.sigla} - #{e.nome}" />
 			</h:selectOneMenu>
 		Telefone:
+			<!-- recebe os dados do usuário(com limite de digitação) -->
 			<h:panelGroup>
-				<h:inputText value="#{pageBean.pessoa.telRes.ddd}" size="2" maxlength="2" />
+				<h:inputText value="#{pageBean.pessoa.telRes.ddd}" size="2"
+					maxlength="2" />
 				<h:inputText value="#{pageBean.pessoa.telRes.num}" />
 			</h:panelGroup>
 		Celular:
 			<h:panelGroup>
-				<h:inputText value="#{pageBean.pessoa.telCel.ddd}" size="2" maxlength="2" />
+				<h:inputText value="#{pageBean.pessoa.telCel.ddd}" size="2"
+					maxlength="2" />
 				<h:inputText value="#{pageBean.pessoa.telCel.num}" />
 			</h:panelGroup>
 		</h:panelGrid>
 
-
-	<h:commandButton action ="form2" value="Próximo"></h:commandButton>
+		<!-- leva ao proximo formulário -->
+		<h:commandButton action="form2" value="Próximo"></h:commandButton>
 	</h:form>
 </body>
 </html>

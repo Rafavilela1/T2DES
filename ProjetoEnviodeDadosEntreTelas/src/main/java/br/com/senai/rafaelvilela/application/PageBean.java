@@ -10,20 +10,21 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class PageBean {
+	///declaração de variável
 	private String nome;
 
-	@Inject
+	@Inject //injeta um tipo de variável no java
 	private Flash flash;
 	
 	
 	public String processar() {
-		
+		//coloca o inserido pelo usuário na outra página
 		flash.put("nomeDoUsuario", nome);
 		return "result?faces-redirect=true";
 	}
 
 	
-	
+	//getter e setter
 	public String getNome() {
 		return nome;
 	}

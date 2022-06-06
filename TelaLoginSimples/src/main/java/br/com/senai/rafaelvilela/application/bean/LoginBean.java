@@ -11,24 +11,28 @@ import javax.inject.Named;
 @RequestScoped
 public class LoginBean implements Serializable{
 	private String nome,senha;
-	
+
+	//avisa o console que será construido
 	@PostConstruct
 	public void onCreate() {
 		System.out.println("Bean criado");
 	}
 	
+	//avisa o console que será construido
 	@PreDestroy
 	public void onDestroy() {
 		System.out.println("Bean será destruido");
 	}
 	
+	//valida as informações do Login
 	public String doLogin() {
 		if("abc".equals(nome) && "123".equals(senha)) {
 			return "sucesso";
 		}
 		return null;
 	}
-
+	
+	//getter e setter
 	public String getNome() {
 		return nome;
 	}
@@ -44,6 +48,6 @@ public class LoginBean implements Serializable{
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
+
+
 }	

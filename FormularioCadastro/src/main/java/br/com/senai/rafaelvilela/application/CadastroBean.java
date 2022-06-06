@@ -12,11 +12,13 @@ import javax.inject.Named;
 
 import br.com.senai.rafaelvilela.model.Linguagem;
 
-@SuppressWarnings("serial")
-@Named("cadastro")
-@RequestScoped
-public class CadastroBean implements Serializable{
+@SuppressWarnings("serial") //Tira os sinais de aviso
+@Named("cadastro") //"apelido" do Bean
+@RequestScoped //funciona enquanto a página esta aberta
 
+
+public class CadastroBean implements Serializable{
+	//Declaração de Variável
 	private String nome;
 	private String email;
 	private String senha1;
@@ -25,12 +27,12 @@ public class CadastroBean implements Serializable{
 	private Boolean receberEmails;
 	private String observacoes;
 	private Integer[] linguagens;
-	
+
 	public Linguagem[] getListaLinguagens() {
 		return Linguagem.LINGUAGENS;
 	}
-	
-	
+
+
 	public String getNome() {
 		return nome;
 	}
@@ -79,9 +81,11 @@ public class CadastroBean implements Serializable{
 	public void setLinguagens(Integer[] linguagens) {
 		this.linguagens = linguagens;
 	}
-	
+
+
+	//Transformação em String
 	public String getLinguagensAsString() {
-		
+
 		String str="";
 		boolean first = true;
 		for(Integer linguagem : linguagens) {
@@ -91,11 +95,11 @@ public class CadastroBean implements Serializable{
 			str += Linguagem.LINGUAGENS[linguagem].getNome();
 			first = false;
 		}
-		
+
 		return str;
 	}
 
-	
-		
+
+
 
 }

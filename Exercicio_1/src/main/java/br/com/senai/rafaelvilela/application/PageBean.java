@@ -12,14 +12,15 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class PageBean {
+	//declaração de variável
 	private int num1,num2,num3;
 
-	@Inject
+	@Inject //injeta um tipo de variável no java
 	private Flash flash;
 	
 	
 
-
+	//getter e setter
 	public int getNum1() {
 		return num1;
 	}
@@ -51,7 +52,7 @@ public class PageBean {
 
 	
 	public String somar() {
-		
+		//operação de soma
 		flash.put("resp", (num1+num2+num3));
 		
 		

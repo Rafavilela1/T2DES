@@ -17,15 +17,17 @@
 			<f:facet name="header">
 				Áreas de Interesse
 			</f:facet>
-		
-			<h:selectManyCheckbox value="#{pageBean.pessoa.interesses}" layout="pageDirection">
-				<f:selectItems value="#{pageBean.interesse}" var="e" itemValue="#{e.id}" itemLabel="#{e.area}"  />
+			<!-- Selecão das áreas presentes na lista criada-->
+			<h:selectManyCheckbox value="#{pageBean.pessoa.interesses}"
+				layout="pageDirection">
+				<f:selectItems value="#{pageBean.interesse}" var="e"
+					itemValue="#{e.id}" itemLabel="#{e.area}" />
 			</h:selectManyCheckbox>
-			
+
 		</h:panelGrid>
 
-		<h:commandButton action="form2" value="Anterior"  />
-		<h:commandButton action="result" value="Próximo"  />
+		<h:commandButton action="form2" value="Anterior" />
+		<h:commandButton action="result" value="Próximo" />
 	</h:form>
 </body>
 </html>

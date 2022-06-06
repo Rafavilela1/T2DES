@@ -11,16 +11,16 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 public class PageBean implements Serializable {
-	
+	//instancia o método random
 	private static Random random = new Random();
-
+	//declaração de variável
 	private Integer qtde;
 	private Integer min;
 	private Integer max;
 	
 
 
-	
+	//getter e setter
 	public Integer getQtde() {
 		return qtde;
 	}
@@ -54,6 +54,8 @@ public class PageBean implements Serializable {
 		this.num = num;
 	}
 	
+	
+	//gera números aleatórios
 public String geradordeNumeros() {
 		
 		for (int i = 0; i < qtde; i++) {

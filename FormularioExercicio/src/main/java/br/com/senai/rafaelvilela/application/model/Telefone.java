@@ -6,9 +6,11 @@ public class Telefone {
 	public enum Tipo {
 		FIXO, CELULAR
 	}
-
+	//Declaração de variáveis
 	private String ddd,num;
 	private Tipo tipo;
+	
+	//getter e setter
 	public String getDdd() {
 		return ddd;
 	}

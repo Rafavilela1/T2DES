@@ -13,6 +13,7 @@
 <body>
 	<h:form>
 		<h:panelGrid columns="2">
+			<!-- recebe os dados da empresa -->
 			Nome da Empresa:
 			<h:inputText value="#{pageBean.pessoa.nomeEmpresa}" />
 			Cargo:
@@ -36,16 +37,18 @@
 			Estado:
 			<h:selectOneMenu value="#{pageBean.pessoa.endCom.estado.sigla}">
 				<f:selectItem itemValue="Selecione" noSelectionOption="true" />
-				<f:selectItems value="#{pageBean.estados}" var="e" itemValue="#{e.sigla}" itemLabel="#{e.sigla} - #{e.nome}" />
+				<f:selectItems value="#{pageBean.estados}" var="e"
+					itemValue="#{e.sigla}" itemLabel="#{e.sigla} - #{e.nome}" />
 			</h:selectOneMenu>
 			Telefone comercial:
 			<h:panelGroup>
-				<h:inputText value="#{pageBean.pessoa.telCom.ddd}" size="2" maxlength="2" />
+				<h:inputText value="#{pageBean.pessoa.telCom.ddd}" size="2"
+					maxlength="2" />
 				<h:inputText value="#{pageBean.pessoa.telCom.num}" />
 			</h:panelGroup>
-		
-		<h:commandButton  action="form1" value="Anterior"/>
-		<h:commandButton action="form3" value="Próximo" />
+			<!--botões de navegação entre as páginas -->
+			<h:commandButton action="form1" value="Anterior" />
+			<h:commandButton action="form3" value="Próximo" />
 		</h:panelGrid>
 	</h:form>
 </body>
