@@ -1,11 +1,13 @@
 package br.com.senai.rafaelvilela.jpa.model;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Despesas {
+public class Despesas{
 
 	@Id
 	@GeneratedValue
@@ -15,6 +17,7 @@ public class Despesas {
 	private String descricao;
 	private Double valor;
 	private boolean edit;
+
 	
 	
 	public Integer getId() {
@@ -56,6 +59,8 @@ public class Despesas {
 		this.valor = valor;
 	}
 	
+	
+
 	public Despesas() { //Construtor vazio
 		super();
 	}
