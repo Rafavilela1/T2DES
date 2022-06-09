@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.ejb;
+package br.com.rafaelvilela.application.ejb;
 
 import java.util.Date;
 import java.util.List;
@@ -7,11 +7,11 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.com.rafaelcosta.application.model.Cliente;
-import br.com.rafaelcosta.application.model.Pagamento;
-import br.com.rafaelcosta.application.model.Pagamento.TipoPagamento;
-import br.com.rafaelcosta.application.model.Pedido;
-import br.com.rafaelcosta.application.model.Produto;
+import br.com.rafaelvilela.application.model.Cliente;
+import br.com.rafaelvilela.application.model.Pagamento;
+import br.com.rafaelvilela.application.model.Pedido;
+import br.com.rafaelvilela.application.model.Produto;
+import br.com.rafaelvilela.application.model.Pagamento.TipoPagamento;
 
 
 @Stateless
@@ -19,7 +19,6 @@ public class PedidoBean {
 
 	@PersistenceContext
 	private EntityManager em;
-	//lista os pedidos
 	public List<Pedido> listar() {
 		return em.createQuery("SELECT p FROM Pedido p", Pedido.class).getResultList();
 	}
@@ -34,7 +33,7 @@ public class PedidoBean {
 		pagamento.setTipoPagto(tipoPagamento);
 		em.persist(pagamento);
 		
-		pedido.setPagamento(pagamento);//salva tudo no banco de dados
+		pedido.setPagamento(pagamento);
 	}
 	
 	public void excluir(Integer pedidoId) {
@@ -53,7 +52,7 @@ public class PedidoBean {
 		em.persist(pedido);//grava as informações na tabela
 		
 		double valorTotal = 0;
-		//adiciona o produto e soma ele
+		
 		for (Integer produtoId : produtosIds) {
 			Produto produto = em.find(Produto.class, produtoId);
 			pedido.getProdutos().add(produto);

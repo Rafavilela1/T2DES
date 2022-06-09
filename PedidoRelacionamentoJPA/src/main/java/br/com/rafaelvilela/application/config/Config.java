@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.config;
+package br.com.rafaelvilela.application.config;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.faces.annotation.FacesConfig;

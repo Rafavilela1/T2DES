@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.ejb;
+package br.com.rafaelvilela.application.ejb;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.com.rafaelcosta.application.model.Cliente;
+import br.com.rafaelvilela.application.model.Cliente;
 
 //tempo de vida do EJB
 @Stateless

@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.bean;
+package br.com.rafaelvilela.application.bean;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,8 +8,8 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
-import br.com.rafaelcosta.application.ejb.PedidoBean;
-import br.com.rafaelcosta.application.model.Pedido;
+import br.com.rafaelvilela.application.ejb.PedidoBean;
+import br.com.rafaelvilela.application.model.Pedido;
 
 
 @Named
@@ -21,7 +21,6 @@ public class ListPedidosBean implements Serializable {
 	private PedidoBean pedidoBean;
 	
 	private List<Pedido> pedidos;
-	//carrega os pedidos
 	@PostConstruct
 	public void init() {
 		pedidos = pedidoBean.listar();
@@ -40,7 +39,6 @@ public class ListPedidosBean implements Serializable {
 	public String excluir(Integer pedidoId) {
 		
 		pedidoBean.excluir(pedidoId);
-		//atualiza a página 
 		return "pedidos?faces-redirect=true";
 	}
 }

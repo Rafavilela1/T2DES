@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.bean;
+package br.com.rafaelvilela.application.bean;
 
 
 import java.io.Serializable;
@@ -10,13 +10,15 @@ import javax.inject.Named;
 
 @Named
 @ApplicationScoped
-//coloca o valor de acordo com a moeda local(real);transforma o valor em double
+
 public class FormatterBean implements Serializable {
 
 
 	private static final Locale LOCALE_BR = new Locale("pt", "BR");
 	
+	//coloca o valor de acordo com a moeda local(real);transforma o valor em double
 	public String formatarMoeda(double valor) {
+		
 		NumberFormat nf = NumberFormat.getCurrencyInstance(LOCALE_BR);
 		//escolhe qual valor vai ser formatado
 		return nf.format(valor);

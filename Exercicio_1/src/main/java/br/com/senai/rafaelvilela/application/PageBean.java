@@ -9,8 +9,8 @@ import javax.inject.Named;
 
 
 @SuppressWarnings("serial")
-@Named
-@RequestScoped
+@Named    //Permite que a classe seja chamada por outro nome determinado pelo usuário
+@RequestScoped     //Permite o funcionamento da classe enquanto estiver sendo usada
 public class PageBean {
 	//declaração de variável
 	private int num1,num2,num3;
@@ -20,7 +20,7 @@ public class PageBean {
 	
 	
 
-	//getter e setter
+	//getter e setter (pegam valor de uma variavel privada ; atribuem valor)
 	public int getNum1() {
 		return num1;
 	}

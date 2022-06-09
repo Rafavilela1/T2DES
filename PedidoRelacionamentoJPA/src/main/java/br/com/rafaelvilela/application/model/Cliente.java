@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.model;
+package br.com.rafaelvilela.application.model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,14 +9,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@Entity
+@Entity //Cria a tabela cliente
 public class Cliente implements Serializable {
 	
 	@Id
 	@GeneratedValue
 	private Integer id;
-	//nullable determina se o campo pode ser vazio ou não
-	//length determina o nnumero máximo de carateres no campo
+	//nullable - analisa se o campo pode ser vazio ou não
+	//length - Determina o numero máximo de caracteres
+	//OneToMany - Determina o tipo de cardinalidade entre as tabelas
+	
 	@Column(length = 100, nullable = false)
 	private String nome;
 	
@@ -57,7 +59,7 @@ public class Cliente implements Serializable {
 	public void setPedidos(List<Pedido> pedidos) {
 		this.pedidos = pedidos;
 	}
-
+	//Sobrescreve o método
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", nome=" + nome + ", email=" + email + "]";

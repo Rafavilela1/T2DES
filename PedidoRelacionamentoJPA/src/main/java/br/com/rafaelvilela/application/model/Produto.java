@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.model;
+package br.com.rafaelvilela.application.model;
 
 import java.io.Serializable;
 

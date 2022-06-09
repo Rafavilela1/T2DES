@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.ejb;
+package br.com.rafaelvilela.application.ejb;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.com.rafaelcosta.application.model.Produto;
+import br.com.rafaelvilela.application.model.Produto;
 
 @Stateless
 public class ProdutoBean {

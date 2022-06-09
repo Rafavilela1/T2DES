@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.model;
+package br.com.rafaelvilela.application.model;
 
 import java.io.Serializable;
 
@@ -12,8 +12,8 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class Pagamento implements Serializable {
-//enum permite escolher um dos valores
-	public enum TipoPagamento {
+
+	public enum TipoPagamento { //facilita o manuseio de constantes
 		CARTAO_CREDITO,
 		BOLETO
 	}
@@ -23,10 +23,10 @@ public class Pagamento implements Serializable {
 	private Integer id;
 	
 	@Enumerated(EnumType.STRING)
-	//escolhe o nome da coluna, se não tiver nome, automaticamente escolhe o nome do atributo
+	//Escolhe o nome da coluna
 	@Column(name = "tipo_pagto", length = 20, nullable = false)
 	private TipoPagamento tipoPagto;
-	//um pedido para um pagamento, relação da tabela
+	//Relação de cardinalidade (um para um)
 	@OneToOne(mappedBy = "pagamento")
 	private Pedido pedido;
 	

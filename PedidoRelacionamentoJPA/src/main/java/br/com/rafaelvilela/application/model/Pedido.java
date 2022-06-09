@@ -1,4 +1,4 @@
-package br.com.rafaelcosta.application.model;
+package br.com.rafaelvilela.application.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -27,24 +27,26 @@ public class Pedido implements Serializable {
 	
 	@Column(name = "valor_total")
 	private Double valorTotal;
-	//escolhe como tipo de dado Date(data)
+	
+	//Transforma a coluna no formato Date
 	@Temporal(TemporalType.DATE)
 	@Column(nullable = false)
 	private Date data;
 	
 	@OneToOne
-	//leva os dados para uma coluna com o nome que estará la
+
+	//nomeia a tabela que recebe uma chave estrangeira
 	@JoinColumn(name = "pagamento_id")
 	private Pagamento pagamento;
 	
-	@ManyToOne //relacionamento de muitos para muitos
+	@ManyToOne 
 	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	
-	//coloca um valor em uma coluna para facilitar o join
-	
+
+	//Nomeia uma terceira tabela que recebe duas chaves estrangeiras
 	@JoinTable(name = "pedido_produto", 
 		joinColumns = @JoinColumn(name = "pedido_id"),
 		inverseJoinColumns = @JoinColumn(name = "produto_id"))
