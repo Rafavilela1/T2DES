@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf" lang="pt-br">
+
+<h:head>
+	<meta http-equi="Content=Type" content="text/html; charset=ISO-8859-1" />
+
+	<title>Template</title>
+</h:head>
+<h:body>
+<!-- Tabela com o template -->
+	<table width="100%" border="1">
+		<tr>
+		<!-- Cabeçalho com imagem -->
+			<td align="center">
+			<h3>#{titulo}</h3>
+			<h:graphicImage
+					value="https://grupodpg.com.br/wp-content/uploads/2016/03/Despesas-Fixas-e-Variaveis.jpg" width="300px"></h:graphicImage>
+				
+				
+			</td>
+		</tr>
+	</table>
+	<br />
+	<table width="100%" border="10">
+		<tr>
+			<td><ui:insert name= "conteudo"/></td>
+		</tr>
+	</table>
+
+	<br />
+
+	<table width="100%" border="1">
+		<tr>
+		<!-- rodapé -->
+			<td align="center">Todos os Direitos Reservados</td>
+		</tr>
+	</table>
+</h:body>
+</html>

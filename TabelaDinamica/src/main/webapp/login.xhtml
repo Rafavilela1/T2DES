@@ -10,11 +10,32 @@
 	<meta http-equi="Content=Type" content="text/html; charset=ISO-8859-1" />
 	<title>Login</title>
 </h:head>
+<style>
+	body{
+	background-color: lightblue;
+	color: black;
+	position: center;
+	}
+	
+	
+	.fundo{
+	background-color: white;
+	width: 500px;
+	height: 200px;
+	border-radius: 20px;
+	margin: 20px;
+	padding: 20px;
+	padding-top: 60px;
+	}
+</style>
 
 <body>
-	<center>
-		<h1>Login</h1>
-		<h:form>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<center>
+	<div class="fundo">
+	<h:form>
+		
+			<h1>Login</h1>
 			<h:panelGrid columns="2">
 Nome:
 <h:inputText value="#{loginBean.nome}"></h:inputText>
@@ -23,12 +44,18 @@ Senha:
 			</h:panelGrid>
 			<h:commandButton id="login" value="Login"
 				action="#{loginBean.doLogin}"></h:commandButton>
+	
+	
 
-
+	
 
 		</h:form>
-	</center>
-
+		</div>
+		
+		<h:graphicImage
+					value="https://c.tenor.com/vWliNmchbEkAAAAC/welcome-greetings.gif" width="400px"></h:graphicImage>
+		
+ </center>
 </body>
 
 </html>

@@ -38,19 +38,15 @@
 	</script>
 <body>
 
+<ui:composition template="/template.xhtml">
+<ui:param name="titulo" value="Mercadinho Mossoró"></ui:param>
+<ui:define name="conteudo">
+
+
+
 	<h:outputStylesheet library="css" name="styles.css"/>
 
-	<table width="100%" border="1">
-		<tr>
-			<td align="center">
-				<h3>Mercadinho Mossoró</h3> <h:graphicImage
-					value="https://grupodpg.com.br/wp-content/uploads/2016/03/Despesas-Fixas-e-Variaveis.jpg" width="300px"></h:graphicImage>
-			</td>
 
-		</tr>
-
-
-	</table>
 
 	<h:form styleClass="form" id="f">
 		<center>
@@ -137,20 +133,9 @@
 			</h:panelGroup>
 		</center>
 	</h:form>
-
-	<table width="100%" border="1">
-		<tr>
-			<td align="center">Todos os direitos reservados</td>
-
-		</tr>
-	</table>
-
-	<script type="text/javascript">
-	var data = document.getElementById("Data");
-	var descricao = document.getElementById("Descrição");
-	var valor = document.getElementById("Valor");
-	if()	
-	</script>
+</ui:define>
+</ui:composition>
+	
 
 </body>
 </html>
