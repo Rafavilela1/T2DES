@@ -17,7 +17,7 @@ public class LoginBean implements Serializable{
 	//Valida o login
 	public String doLogin() {
 		if("abc".equals(nome) && "123".equals(senha)) {
-			return "Cadastro";
+			return "Despesas";
 		}
 		return null;
 	}
