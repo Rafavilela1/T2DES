@@ -10,15 +10,15 @@
 	<meta http-equi="Content=Type" content="text/html; charset=ISO-8859-1" />
 	<title>Login</title>
 </h:head>
+<!-- Estilo da página -->
 <style>
-	body{
+body {
 	background-color: lightblue;
 	color: black;
 	position: center;
-	}
-	
-	
-	.fundo{
+}
+
+.fundo {
 	background-color: white;
 	width: 500px;
 	height: 200px;
@@ -26,36 +26,51 @@
 	margin: 20px;
 	padding: 20px;
 	padding-top: 60px;
-	}
+}
 </style>
 
 <body>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<center>
-	<div class="fundo">
-	<h:form>
-		
-			<h1>Login</h1>
-			<h:panelGrid columns="2">
-Nome:
-<h:inputText value="#{loginBean.nome}"></h:inputText>
-Senha:
-<h:inputSecret value="#{loginBean.senha}"></h:inputSecret>
-			</h:panelGrid>
-			<h:commandButton id="login" value="Login"
-				action="#{loginBean.doLogin}"></h:commandButton>
-	
-	
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
 
-	
+	<!-- Centraliza a página -->
+	<center>
+		<!-- chama o estilo -->
+		<div class="fundo">
+			<!-- inicia o forms de preenchimento -->
+			<h:form>
+				<!-- Título -->
+				<h1>Login</h1>
+				<h:panelGrid columns="2">
+				Nome:
+				<h:inputText value="#{loginBean.nome}"></h:inputText>
+				Senha:
+				<h:inputSecret value="#{loginBean.senha}"></h:inputSecret>
+				</h:panelGrid>
+				<!-- valida se o login está correto e manda para a página de despesas -->
+				<h:commandButton id="login" value="Login"
+					action="#{loginBean.doLogin}"></h:commandButton>
 
-		</h:form>
+
+
+
+
+			</h:form>
 		</div>
-		
+		<!-- imagem de boas vindas -->
 		<h:graphicImage
-					value="https://c.tenor.com/vWliNmchbEkAAAAC/welcome-greetings.gif" width="400px"></h:graphicImage>
-		
- </center>
+			value="https://c.tenor.com/vWliNmchbEkAAAAC/welcome-greetings.gif"
+			width="400px"></h:graphicImage>
+
+	</center>
 </body>
 
 </html>

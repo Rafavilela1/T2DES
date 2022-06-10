@@ -12,8 +12,11 @@ import br.com.senai.rafaelvilela.jpa.model.Despesas;
 public class DespesasBean {
 
 	@PersistenceContext
+	//Faz o Biding com o banco de dados
 	private EntityManager em;
 	
+	
+	//insere atualiza e exclui as informações no banco de dados
 	public void inserir(Despesas despesas) {
 		em.persist(despesas);
 	}

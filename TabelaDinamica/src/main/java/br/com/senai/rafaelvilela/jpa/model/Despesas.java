@@ -6,12 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+@Entity //Cria a tabela
 public class Despesas{
 
-	@Id
+	//Geram IDs automaticamente
+	@Id 
 	@GeneratedValue
 	
+	//declaração das variáveis
 	private Integer id;
 	private String data;
 	private String descricao;
@@ -19,7 +21,7 @@ public class Despesas{
 	private boolean edit;
 
 	
-	
+	//getter e setter
 	public Integer getId() {
 		return id;
 	}
@@ -59,8 +61,6 @@ public class Despesas{
 		this.valor = valor;
 	}
 	
-	
-
 	public Despesas() { //Construtor vazio
 		super();
 	}

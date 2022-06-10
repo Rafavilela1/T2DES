@@ -6,13 +6,15 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+@SuppressWarnings("serial") //Tira os sinais de aviso
+@Named //"apelido" do bean
+@RequestScoped //funciona enquanto a página esta aberta
 
-@Named
-@RequestScoped
 public class LoginBean implements Serializable{
+	//Declaração das variáveis
 	private String nome,senha;
 	
-	
+	//Valida o login
 	public String doLogin() {
 		if("abc".equals(nome) && "123".equals(senha)) {
 			return "Cadastro";
@@ -20,6 +22,7 @@ public class LoginBean implements Serializable{
 		return null;
 	}
 
+	//getter e setter
 	public String getNome() {
 		return nome;
 	}

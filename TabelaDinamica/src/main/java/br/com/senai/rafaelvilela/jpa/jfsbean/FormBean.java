@@ -16,15 +16,15 @@ import br.com.senai.rafaelvilela.jpa.ejbbean.DespesasBean;
 import br.com.senai.rafaelvilela.jpa.model.Despesas;
 
 
-@Named("form")
-@RequestScoped
+@Named("form") //"apelido" do bean
+@RequestScoped //funciona enquanto a página esta aberta
 public class FormBean implements Serializable {
 	
-	@EJB
+	@EJB //faz o relacionamento com o banco de dados
 	private DespesasBean despesasBean;
 
-	@Inject
-	private FacesContext context;
+	@Inject 
+	private FacesContext context; //grava todos os eventos que tem na tela
 	
 	private UIComponent searchInputText;
 	
@@ -32,6 +32,8 @@ public class FormBean implements Serializable {
 	
 	private Despesas despesas;
 	
+	
+	//manipula os dados
 	public void gravar(AjaxBehaviorEvent event) {
 		if(despesas.getId()==null) {
 			despesasBean.inserir(despesas);

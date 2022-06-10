@@ -17,17 +17,15 @@ import br.com.senai.rafaelvilela.jpa.model.Despesas;
 
 
 
-@SuppressWarnings("serial") //tira anuncios de advert�ncia
-@Named("tabela")
-@SessionScoped //tempo de vida da p�gina, o "session" mant�m os dados enquanto o navegador estiver aberto
+@SuppressWarnings("serial") //Tira os sinais de aviso
+@Named("tabela") //"apelido" do bean
+@SessionScoped //tempo de vida da pagina
 public class PageBean implements Serializable{
-	//Criando uma Lista com todos os objetos
+	//Lista com objetos
 	private List<Despesas> despesas = new ArrayList<>();
 	
-	//Vari�veis que ir� receber as informa��es do formul�rio e ir� enviar para a classe "Despesas"
-	private String user;
-	private String senha;
-	
+
+	//declaração das variaveis
 	String data1;
 	String desc1;
 	Double Valor1;
@@ -35,26 +33,11 @@ public class PageBean implements Serializable{
 	
 	private Despesas despesas1;
 	
-	@EJB
+	@EJB //faz o relacionamento com o banco de dados
 	private DespesasBean despesaBean;
 	
 	
-	public String getUser() {
-		return user;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
-	}
-
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-
+	//getter e setter
 	public String getData1() {
 		return data1;
 	}
@@ -80,6 +63,7 @@ public class PageBean implements Serializable{
 	}
 
 	
+	//grava, edita e exclui os itens
 	public void gravarBanco(Despesas d) {
 		despesaBean.inserir(d);
 		
@@ -97,7 +81,7 @@ public class PageBean implements Serializable{
 
 	
 	
-	
+	//Pega as informações inseridas e as coloca em variáveis. Após isso, coloca essas variáveis em um objeto e insere na lista.
 	public String inserir(String data,String desc,Double Valor) {
 		
 		Despesas d = new Despesas(data,desc,Valor);
@@ -114,6 +98,8 @@ public class PageBean implements Serializable{
 
 	}
 	
+	
+	//grava, edita e exclui os itens
 	public String excluir(Despesas despesa) {
 		//removendo o objeto da lista 
 		despesas.remove(despesa);
@@ -137,6 +123,7 @@ public class PageBean implements Serializable{
 		return null;
 	}
 	
+	//retorna a tabela de despesas
 	public List<Despesas> getDespesas() {
 		return despesas;
 	}
@@ -148,6 +135,8 @@ public class PageBean implements Serializable{
 		return despesas1;
 	}
 
+	
+	//getter e setter
 	public Boolean getBack() {
 		return back;
 	}
@@ -155,12 +144,5 @@ public class PageBean implements Serializable{
 	public void setBack(Boolean back) {
 		this.back = back;
 	}
-	public String doLogin() {
-		
-		if("willian".equals(user) && "admin".equals(senha)) {
-			return "despesas";	
-		}
-		return null;
-	}
-	
+
 }
